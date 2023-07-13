@@ -1,11 +1,15 @@
 
 import React from "react";
+import {useState} from "react";
 import './../styles/App.css';
 
 const App = () => {
+
+  let [count,setCount] = useState(0);  
   return (
     <div>
-        <p>I am learning React. My life is getting better.</p>
+      <p>Button clicked {count} times</p>
+      <button onClick={()=> setCount(count++)}>Click me</button>
     </div>
   )
 }
